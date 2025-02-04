@@ -18,3 +18,4 @@ try {
     echo "Conexión fallida: " . $e->getMessage();
 
 }
+?>
