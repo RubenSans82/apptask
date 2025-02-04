@@ -1,10 +1,14 @@
 <?php
     include 'partials/header.php';
     include 'conection.php';
+    session_start();
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: login.php');
+    }
 ?>
 <main>
     <h1>Tareas</h1>
-
+    <a href="create.php">Crear tarea</a>
     <table>
         <thead>
             <tr>
@@ -17,7 +21,8 @@
         </thead>
         <tbody>
             <?php
-                $query = $conection->prepare("SELECT * FROM tasks");
+                $query = $conection->prepare("SELECT * FROM tasks WHERE users_id = :user");
+                $query->bind_param(":user", $_SESSION["user_id"]);
                 $query->execute();
                 $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($tasks as $task) {
