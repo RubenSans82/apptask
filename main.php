@@ -22,7 +22,7 @@
         <tbody>
             <?php
                 $query = $conection->prepare("SELECT * FROM tasks WHERE users_id = :user");
-                $query->bind_param(":user", $_SESSION["user_id"]);
+                $query->bindParam(":user", $_SESSION["user_id"]);
                 $query->execute();
                 $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($tasks as $task) {
