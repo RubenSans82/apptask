@@ -1,0 +1,17 @@
+* {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+header {
+    background-color: seagreen;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    background-color: lightblue;
+}
+
+footer {
+    background-color: lightcoral;
+}
