@@ -1,5 +1,5 @@
 <?php
-    include 'header.php';
+    include 'partials/header.php';
     include 'conection.php';
 ?>
 <main>
@@ -39,5 +39,5 @@
     </table>
 </main>
 <?php
-    include 'footer.php';
+    include 'partials/footer.php';
 ?>
