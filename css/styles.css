@@ -5,13 +5,61 @@
 header {
     background-color: seagreen;
     display: flex;
+    flex-direction: column;
+
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+.imgUser {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.imgUser img {
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    background-color: rgb(231, 28, 221);
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0px;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+.header {
+    background-color: rgb(187, 231, 28);
+    display: flex;
+    justify-content: space-between;
+
 }
 
 main {
-    background-color: lightblue;
+    background-color: rgb(120, 205, 233);
 }
 
 footer {
     background-color: lightcoral;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0px;
 }

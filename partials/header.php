@@ -10,6 +10,10 @@
 
 <body>
     <header>
-        <a href="index.php"><img src="logo.jpg" alt="logo"></a>
-        <img src="user.jpg" alt="user">
+        <div class="header">
+            <a href="index.php"><img src="img/logo.png" alt="logo"></a>
+            <div class="imgUser">
+                <img src="img/user.jpg" alt="user">
+            </div>
+        </div>
     </header>

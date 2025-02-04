@@ -10,8 +10,12 @@
 
 <body>
     <header>
-    <div><a href="index.php"><img src="logo.jpg" alt="logo"></a>
-        <img src="user.jpg" alt="user"></div>
+        <div class="header">
+            <a href="index.php"><img src="img/logo.png" alt="logo"></a>
+            <div class="imgUser">
+                <img src="img/user.jpg" alt="user">
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="login.php">Iniciar Sesión</a></li>
@@ -23,9 +27,9 @@
 
     </main>
     <footer>
-    <p>
-        "Gael&Ruben © 2025"
-    </p>
+        <p>
+            "Gael&Ruben © 2025"
+        </p>
     </footer>
 </body>
 
