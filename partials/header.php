@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,8 +27,20 @@
         </div>
         <nav>
             <ul>
-                <li>"username"</li>
-                <div class="navButton"><li><a href="index.php">Logout</a></li></div>
+                <?php
+                if (isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                } else {
+                    $username = "Invitado";
+                }
+                ?>
+                <li><?php echo $username ?> </li>
+                <div class="navButton">
+                    <li><a href="edituser.php">Perfil de usuario</a></li>
+                </div>
+                <div class="navButton">
+                    <li><a href="logout.php">Logout</a></li>
+                </div>
             </ul>
         </nav>
     </header>

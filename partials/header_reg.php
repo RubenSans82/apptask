@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,30 +23,14 @@
                 <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="in" delay="500" state="in-reveal"
                     colors="primary:#109121,secondary:#d1fad7" style="width:80px;height:80px">
                 </lord-icon>
-                </lord-icon>
             </div>
         </div>
         <nav>
             <ul>
-                <div class="navButton">
-                    <li><a href="login.php">Iniciar Sesión</a></li>
                 </div>
                 <div class="navButton">
-                    <li><a href="register.php">Registrarse</a></li>
+                    <li><a href="index.php">Volver</a></li>
                 </div>
             </ul>
         </nav>
     </header>
-    <main>
-
-    </main>
-</body>
-
-<footer>
-    <p>
-        "Gael&Ruben © 2025"
-    </p>
-</footer>
-<div id="spark-container"></div> <!-- Contenedor para las chispas -->
-
-</html>

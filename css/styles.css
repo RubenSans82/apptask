@@ -97,6 +97,9 @@ main {
     background-color: rgb(175, 255, 151);
     display: flex;
     height: 82vh;
+    position: relative;
+    top: 6px;
+    overflow: hidden;
 }
 
 footer {
