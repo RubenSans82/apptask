@@ -5,10 +5,10 @@ include 'conection.php';
 <main>
     <h1>Crear tarea</h1>
     <form action="store.php" method="POST">
-        <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" required>
+        <label for="title">Titulo</label>
+        <input type="text" name="title" id="title" required>
         <label for="description">Descripción</label>
-        <textarea name="description" id="description" required></textarea>
+        <textarea name="description" id="description"></textarea>
         <label for="status">Estado</label>
         <select name="status" id="status" required>
             <option value="pendiente">Pendiente</option>

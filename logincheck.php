@@ -11,7 +11,7 @@ if (isset($_POST['user'])) {
     if (password_verify($password, $user['password'])) {
         session_start();
         $_SESSION['user_id'] = $user['users_id'];
-        $_SESSION['user'] = $username;
+        $_SESSION['username'] = $username;
         header('Location: main.php');
         exit;
     }

@@ -21,20 +21,20 @@
         </thead>
         <tbody>
             <?php
-                $query = $conection->prepare("SELECT * FROM tasks WHERE users_id = :user");
+                $query = $conection->prepare("SELECT * FROM tasks AS p LEFT JOIN status AS s ON p.status_id = s.status_id WHERE p.users_id = :user" );
                 $query->bindParam(":user", $_SESSION["user_id"]);
                 $query->execute();
                 $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($tasks as $task) {
             ?>
             <tr>
-                <td><?php echo $task['name']; ?></td>
+                <td><?php echo $task['title']; ?></td>
                 <td><?php echo $task['description']; ?></td>
-                <td><?php echo $task['create_date']; ?></td>
-                <td><?php echo $task['status']; ?></td>
+                <td><?php echo $task['creation_date']; ?></td>
+                <td><?php echo ucfirst($task['status']); ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $task['id']; ?>">Editar</a>
-                    <a href="delete.php?id=<?php echo $task['id']; ?>">Eliminar</a>
+                    <a href='edit.php?id=<?php echo $task["id"]; ?>'>Editar</a>
+                    <a href='delete.php?id=<?php echo $task["id"]; ?>'>Eliminar</a>
                 </td>
             </tr>
             <?php
