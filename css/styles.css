@@ -22,14 +22,27 @@ header {
 
 }
 
+.topHeader {
+    background-color: rgb(24, 104, 0);
+    height: 15%;
+    box-sizing: border-box;
+}
+
 .header {
+    display: flex;
+    justify-content: space-between;
     width: auto;
-    height: 80%;
-    background-image: url("../img/header.jpg");
-    background-size: 100% 350%;
-    background-position: 117px top;
-    background-repeat: no-repeat;
+    height: 65%;
+    background: linear-gradient(90deg, rgba(24, 104, 0, 1) 10%, rgb(4, 19, 0) 100%);
     border: 3px solid rgb(24, 104, 0);
+    margin-right: 15px;
+}
+
+.header a img{
+
+    margin-left: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 header img {
@@ -37,6 +50,9 @@ header img {
     height: 100%;
     box-sizing: border-box;
     border-right: 3px solid rgb(24, 104, 0);
+    border-bottom: 3px solid rgb(24, 104, 0);
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -55,8 +71,12 @@ nav {
     height: 20%;
     box-sizing: border-box;
     border-bottom: 2px solid black;
-    
-    
+    position: relative;
+    z-index: 1;
+    /* Asegúrate de que el nav esté por encima del main */
+
+
+
 }
 
 nav ul {
@@ -65,6 +85,7 @@ nav ul {
     list-style-type: none;
     margin: 0px;
     align-items: center;
+    margin-right: 13px;
 }
 
 nav ul li {
@@ -72,12 +93,13 @@ nav ul li {
     color: white;
     list-style-type: none;
     font-size: 90%;
-    
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
+    padding: 2px;
+
 }
 
 #usernameNav {
@@ -96,23 +118,28 @@ nav ul li a {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     margin-right: 5px;
     font-family: sans-serif;
-}
+    padding: 1px;
+    }
 
-.header {
-    display: flex;
-    justify-content: space-between;
 
-}
 
 main {
     background-color: rgb(175, 255, 151);
     height: 82vh;
     position: relative;
-    top: 6px;
+    top: 0px;
+    /* Adjusted to show the 2px black border of the nav */
     overflow: auto;
+    /* Asegúrate de que el main esté por debajo del nav */
+    background-image: url("../img/mainbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
 }
 
 #createButton {
@@ -143,10 +170,11 @@ table {
     font-size: 14px;
     text-align: left;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    
+
 }
 
-table th, table td {
+table th,
+table td {
     padding: 12px;
     border: 1px solid rgb(24, 104, 0);
 }
@@ -168,25 +196,31 @@ table tr:nth-child(odd) {
 
 footer {
     background-color: rgb(24, 104, 0);
+    background: linear-gradient(90deg, rgba(24, 104, 0, 1) 10%, rgb(11, 49, 0) 20%, rgba(24, 104, 0, 1) 30%, rgb(11, 49, 0) 40%, rgba(24, 104, 0, 1) 50%, rgb(11, 49, 0) 60%, rgba(24, 104, 0, 1) 70%, rgb(11, 49, 0) 80%, rgba(24, 104, 0, 1) 90%, rgb(11, 49, 0) 100%);
     position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     border-top: 2px solid black;
     height: 3vh;
 }
 
 footer p {
-    margin: 0px;
+    margin-top: 5px;
     color: white;
+    font-family: sans-serif;
+    font-size: 90%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 #spark-container {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none; /* Para que las chispas no interfieran con el mouse */
+    pointer-events: none;
+    /* Para que las chispas no interfieran con el mouse */
     width: 100%;
     height: 100%;
 }
@@ -195,9 +229,10 @@ footer p {
     position: absolute;
     width: 6px;
     height: 6px;
-    background-color: rgb(115, 255, 0); /* Color de las chispas */
+    background-color: rgb(115, 255, 0);
+    /* Color de las chispas */
     border-radius: 50%;
-    animation: spark-animation 0.5s forwards  ;
+    animation: spark-animation 0.5s forwards;
 }
 
 @keyframes spark-animation {
@@ -205,6 +240,7 @@ footer p {
         transform: scale(0) translate(0, 0);
         opacity: 1;
     }
+
     100% {
         transform: scale(1) translate(var(--x), var(--y));
         opacity: 0;
@@ -227,40 +263,41 @@ form {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border: 1px solid rgb(24, 104, 0);
-    border-radius: 5px;
+    background-color: rgb(24, 104, 0);
+    border: 1px solid rgb(4, 19, 0);
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 form label {
     margin-bottom: 5px;
-    color: rgb(24, 104, 0);
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
 form input {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid rgb(24, 104, 0);
-    border-radius: 3px;
+    border-radius: 10px;
     box-sizing: border-box;
-    color: rgb(24, 104, 0);
     font-family: sans-serif;
-    font-size:  14px;
+    font-size: 14px;
 }
 
 form button {
     padding: 10px;
-    background-color: rgb(24, 104, 0);
+    background-color: rgb(11, 49, 0);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    width: 100px;
+    width: 120px;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     font-family: sans-serif;
-    font-size:  14px;
+    font-size: 14px;
 }
 
 form button:hover {
@@ -275,7 +312,7 @@ form select {
     box-sizing: border-box;
     color: rgb(24, 104, 0);
     font-family: sans-serif;
-    font-size:  14px;
+    font-size: 14px;
 }
 
 form textarea {
@@ -286,23 +323,28 @@ form textarea {
     box-sizing: border-box;
     color: rgb(24, 104, 0);
     font-family: sans-serif;
-    font-size:  14px;
+    font-size: 14px;
 }
 
 
 /* Estilo para la barra de desplazamiento */
 ::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
+    width: 12px;
+    /* Ancho de la barra de desplazamiento */
 }
 
 /* Estilo para el "pulgar" (parte que se mueve) */
 ::-webkit-scrollbar-thumb {
-    background-color: #4CAF50; /* Color del pulgar */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: #4CAF50;
+    /* Color del pulgar */
+    border-radius: 10px;
+    /* Bordes redondeados */
 }
 
 /* Estilo para la pista (parte que no se mueve) */
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Color de fondo de la pista */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f1f1f1;
+    /* Color de fondo de la pista */
+    border-radius: 10px;
+    /* Bordes redondeados */
 }

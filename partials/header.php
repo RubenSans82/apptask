@@ -17,10 +17,11 @@ session_start();
 
 <body>
     <header>
+        <div class="topHeader"></div>
         <div class="header">
             <a href="" class="logo"><img src="img/logo.png" alt="logo"></a>
             <div class="imgUser">
-                <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="in" delay="500" state="in-reveal"
+                <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="hover"
                     colors="primary:#109121,secondary:#d1fad7" style="width:80px;height:80px">
                 </lord-icon>
             </div>
@@ -34,7 +35,7 @@ session_start();
                     $username = "Invitado";
                 }
                 ?>
-                <li id="usernameNav" ><?php echo $username ?> </li>
+                <li id="usernameNav"><?php echo $username ?> </li>
                 <div class="navButton">
                     <li><a href="edituser.php">Perfil de usuario</a></li>
                 </div>

@@ -13,6 +13,7 @@
 
 <body>
     <header>
+        <div class="topHeader"></div>
         <div class="header">
             <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
             <div class="imgUser">
@@ -40,7 +41,7 @@
 
 <footer>
     <p>
-        "Gael&Ruben © 2025"
+        "Gael & Ruben © 2025"
     </p>
 </footer>
 <div id="spark-container"></div> <!-- Contenedor para las chispas -->

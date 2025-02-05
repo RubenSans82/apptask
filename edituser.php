@@ -1,6 +1,6 @@
 <?php
 
-include("partials/header.php");
+include("partials/header_user.php");
 
 if (isset($_SESSION['user_id'])) {
     include 'conection.php';
