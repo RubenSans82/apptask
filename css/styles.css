@@ -10,29 +10,29 @@ body {
 }
 
 header {
-    background-color: seagreen;
+    background-color: rgb(24, 104, 0);
     display: flex;
     flex-direction: column;
-    height: 140px;
+    height: 15vh;
     width: 100%;
 
 }
 
 .header {
     width: auto;
-    height: 100px;
+    height: 80%;
     background-image: url("../img/header.jpg");
     background-size: 100% 350%;
     background-position: 117px top;
     background-repeat: no-repeat;
-    border: 3px solid rgb(23, 100, 0);
+    border: 3px solid rgb(24, 104, 0);
 }
 
 header img {
     width: 118;
     height: 100%;
     box-sizing: border-box;
-    border-right: 3px solid rgb(23, 100, 0);
+    border-right: 3px solid rgb(24, 104, 0);
 }
 
 
@@ -44,25 +44,47 @@ header img {
     margin-right: 25px;
 }
 
-.imgUser img {
-    width: 50px;
-    height: auto;
-}
+
 
 nav {
-    background-color: rgb(0, 100, 17);
-    height: 40px;
+    background-color: rgb(24, 104, 0);
+    height: 20%;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    
+    
 }
 
 nav ul {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     list-style-type: none;
     margin: 0px;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 2px;
+    color: white;
+    list-style-type: none;
+    font-size: 90%;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navButton {
+    background-color: rgb(15, 65, 0);
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 2px;
+    margin-right: 5px;
 }
 
 .header {
@@ -72,21 +94,25 @@ nav ul li {
 }
 
 main {
-    background-color: rgb(120, 205, 233);
+    background-color: rgb(175, 255, 151);
     display: flex;
-    height: auto;
+    height: 82vh;
 }
 
 footer {
-    background-color: lightcoral;
+    background-color: rgb(24, 104, 0);
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    height: 3vh;
 }
 
 footer p {
     margin: 0px;
+    color: white;
 }
 
 #spark-container {
