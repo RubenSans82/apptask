@@ -1,17 +1,145 @@
-* {
+/* * {
     border: 1px solid rgb(0, 0, 0);
+}
+*/
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: seagreen;
+    background-color: rgb(24, 104, 0);
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    width: 100%;
+
+}
+
+.header {
+    width: auto;
+    height: 80%;
+    background-image: url("../img/header.jpg");
+    background-size: 100% 350%;
+    background-position: 117px top;
+    background-repeat: no-repeat;
+    border: 3px solid rgb(24, 104, 0);
+}
+
+header img {
+    width: 118;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 3px solid rgb(24, 104, 0);
+}
+
+
+
+.imgUser {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+
+
+nav {
+    background-color: rgb(24, 104, 0);
+    height: 20%;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 2px;
+    color: white;
+    list-style-type: none;
+    font-size: 90%;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navButton {
+    background-color: rgb(15, 65, 0);
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 main {
-    background-color: lightblue;
+    background-color: rgb(175, 255, 151);
+    display: flex;
+    height: 82vh;
 }
 
 footer {
-    background-color: lightcoral;
+    background-color: rgb(24, 104, 0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    height: 3vh;
+}
+
+footer p {
+    margin: 0px;
+    color: white;
+}
+
+#spark-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Para que las chispas no interfieran con el mouse */
+    width: 100%;
+    height: 100%;
+}
+
+.spark {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgb(115, 255, 0); /* Color de las chispas */
+    border-radius: 50%;
+    animation: spark-animation 0.5s forwards  ;
+}
+
+@keyframes spark-animation {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(var(--x), var(--y));
+        opacity: 0;
+    }
 }
