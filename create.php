@@ -3,7 +3,7 @@ include 'partials/header.php';
 include 'conection.php';
 ?>
 <main>
-    <h1>Crear tarea</h1>
+    <h1 class="formTitle" >Crear tarea</h1>
     <form action="store.php" method="POST">
         <label for="title">Titulo</label>
         <input type="text" name="title" id="title" required>

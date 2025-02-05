@@ -9,6 +9,10 @@ body {
     flex-direction: column;
 }
 
+.logo {
+    cursor: default;
+}
+
 header {
     background-color: rgb(24, 104, 0);
     display: flex;
@@ -76,6 +80,15 @@ nav ul li a {
     color: white;
 }
 
+#usernameNav {
+    color: white;
+    margin-right: 10px;
+    font-family: sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .navButton {
     background-color: rgb(15, 65, 0);
     box-sizing: border-box;
@@ -85,6 +98,7 @@ nav ul li a {
     text-decoration: none;
     margin-bottom: 2px;
     margin-right: 5px;
+    font-family: sans-serif;
 }
 
 .header {
@@ -98,8 +112,59 @@ main {
     height: 82vh;
     position: relative;
     top: 6px;
-    overflow: hidden;
+    overflow: auto;
 }
+
+#createButton {
+    background-color: rgb(15, 65, 0);
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    font-family: sans-serif;
+    font-size: 90%;
+    padding: 5px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#createButton a {
+    text-decoration: none;
+    color: white;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid rgb(24, 104, 0);
+}
+
+table th {
+    background-color: rgb(24, 104, 0);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(188, 255, 167);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(214, 255, 201);
+}
+
+
 
 footer {
     background-color: rgb(24, 104, 0);
@@ -150,6 +215,10 @@ footer p {
     text-align: center;
     margin-top: 20px;
     color: rgb(24, 104, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 form {
@@ -175,6 +244,9 @@ form input {
     border: 1px solid rgb(24, 104, 0);
     border-radius: 3px;
     box-sizing: border-box;
+    color: rgb(24, 104, 0);
+    font-family: sans-serif;
+    font-size:  14px;
 }
 
 form button {
@@ -186,8 +258,51 @@ form button {
     cursor: pointer;
     width: 100px;
     margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    font-size:  14px;
 }
 
 form button:hover {
     background-color: rgb(15, 65, 0);
+}
+
+form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgb(24, 104, 0);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(24, 104, 0);
+    font-family: sans-serif;
+    font-size:  14px;
+}
+
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgb(24, 104, 0);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(24, 104, 0);
+    font-family: sans-serif;
+    font-size:  14px;
+}
+
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo para el "pulgar" (parte que se mueve) */
+::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; /* Color del pulgar */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para la pista (parte que no se mueve) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la pista */
+    border-radius: 10px; /* Bordes redondeados */
 }

@@ -1,7 +1,6 @@
 <?php
 
 include("partials/header.php");
-session_start();
 
 if (isset($_SESSION['user_id'])) {
     include 'conection.php';
@@ -14,7 +13,7 @@ if (isset($_SESSION['user_id'])) {
 ?>
 
 <main>
-    <h1>Editar Usuario</h1>
+    <h1 class="formTitle">Editar Usuario</h1>
     <form action="storeedituser.php" method="POST">
         <input type="hidden" name="user_id" value="<?php echo $user['users_id'] ?>">
         <label for="first_name">Nombre</label>
