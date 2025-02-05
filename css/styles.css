@@ -95,7 +95,6 @@ nav ul li a {
 
 main {
     background-color: rgb(175, 255, 151);
-    display: flex;
     height: 82vh;
     position: relative;
     top: 6px;
@@ -145,4 +144,50 @@ footer p {
         transform: scale(1) translate(var(--x), var(--y));
         opacity: 0;
     }
+}
+
+.formTitle {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(24, 104, 0);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgb(24, 104, 0);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-bottom: 5px;
+    color: rgb(24, 104, 0);
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgb(24, 104, 0);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    background-color: rgb(24, 104, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+}
+
+form button:hover {
+    background-color: rgb(15, 65, 0);
 }

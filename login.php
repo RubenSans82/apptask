@@ -4,7 +4,7 @@ include("partials/header_reg.php");
 
 ?>
 <main>
-    <h1>Iniciar sesión</h1>
+    <h1 class="formTitle">Iniciar sesión</h1>
     <form action="logincheck.php" method="POST">
         <label for="user">Usuario</label>
         <input type="user" name="user" id="user" required>

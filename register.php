@@ -4,7 +4,7 @@ include("partials/header_reg.php");
 
 ?>
 <main>
-    <h1>Registrarse</h1>
+    <h1 class="formTitle">Registro</h1>
     <form action="registercheck.php" method="POST">
         <label for="user">Usuario</label>
         <input type="user" name="user" id="user" required>
@@ -15,6 +15,7 @@ include("partials/header_reg.php");
         <label for="password">Contraseña</label>
         <input type="password" name="password" id="password" required>
         <label for="password2">Repetir contraseña</label>
+        <input type="password" name="password2" id="password2" required>
         <button type="submit">Registrarse</button>
     </form> 
 </main>
