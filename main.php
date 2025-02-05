@@ -33,8 +33,8 @@
                 <td><?php echo $task['creation_date']; ?></td>
                 <td><?php echo ucfirst($task['status']); ?></td>
                 <td>
-                    <a href='edit.php?id=<?php echo $task["id"]; ?>'>Editar</a>
-                    <a href='delete.php?id=<?php echo $task["id"]; ?>'>Eliminar</a>
+                    <a href='edit.php?id=<?php echo $task["tasks_id"]; ?>'>Editar</a>
+                    <a href='delete.php?id=<?php echo $task["tasks_id"]; ?>'>Eliminar</a>
                 </td>
             </tr>
             <?php

@@ -18,10 +18,6 @@ if (isset($_POST['title'])) {
         default:
             $status = null;
     }
-    var_dump($_POST);
-    echo "<br>";
-    var_dump($status);
-    exit;
 
     $query = $conection->prepare("INSERT INTO tasks (title, description, status_id, creation_date, users_id) VALUES (:title, :description, :status, CURDATE() , :user)");
     $query->bindParam(":title", $title);
