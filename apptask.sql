@@ -18,52 +18,58 @@ CREATE SCHEMA IF NOT EXISTS `apptask` DEFAULT CHARACTER SET utf8mb4 ;
 USE `apptask` ;
 
 -- -----------------------------------------------------
+-- Table `apptask`.`status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `apptask`.`status` (
+  `status_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `status` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`status_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 6
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
 -- Table `apptask`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `apptask`.`users` (
-  `usuarios_id` INT NOT NULL AUTO_INCREMENT,
+  `users_id` INT(11) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(255) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
-  `first_name` VARCHAR(255) NULL,
-  `last_name` VARCHAR(255) NULL,
-  PRIMARY KEY (`usuarios_id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `apptask`.`states`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `apptask`.`states` (
-  `states_id` INT NOT NULL AUTO_INCREMENT,
-  `state` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`states_id`))
-ENGINE = InnoDB;
+  `first_name` VARCHAR(255) NULL DEFAULT NULL,
+  `last_name` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`users_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
 -- Table `apptask`.`tasks`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `apptask`.`tasks` (
-  `tasks_id` INT NOT NULL AUTO_INCREMENT,
+  `tasks_id` INT(11) NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NULL,
-  `creation_date` TIMESTAMP NULL,
-  `states_id` INT NULL,
-  `usuarios_id` INT NOT NULL,
+  `description` VARCHAR(255) NULL DEFAULT NULL,
+  `creation_date` DATE NULL DEFAULT NULL,
+  `status_id` INT(11) NULL DEFAULT NULL,
+  `users_id` INT(11) NOT NULL,
   PRIMARY KEY (`tasks_id`),
-  INDEX `fk_tasks_states_idx` (`states_id` ASC) ,
-  INDEX `fk_tasks_users1_idx` (`usuarios_id` ASC) ,
+  INDEX `fk_tasks_states_idx` (`status_id` ASC) ,
+  INDEX `fk_tasks_users1_idx` (`users_id` ASC) ,
   CONSTRAINT `fk_tasks_states`
-    FOREIGN KEY (`states_id`)
-    REFERENCES `apptask`.`states` (`states_id`)
+    FOREIGN KEY (`status_id`)
+    REFERENCES `apptask`.`status` (`status_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_tasks_users1`
-    FOREIGN KEY (`usuarios_id`)
-    REFERENCES `apptask`.`users` (`usuarios_id`)
+    FOREIGN KEY (`users_id`)
+    REFERENCES `apptask`.`users` (`users_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
