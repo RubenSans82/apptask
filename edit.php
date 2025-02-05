@@ -11,7 +11,9 @@ $query = $conection->prepare('SELECT * FROM tasks WHERE tasks_id = :id AND users
 $query->bindParam(':id', $_GET['id']);
 $query->bindParam(':user', $_SESSION['user_id']);
 $query->execute();
-$result = $query->fetch();
+if(!$result = $query->fetch()){
+    header('Location: main.php');
+}
 
 include'partials/header.php';
 ?>
