@@ -415,6 +415,16 @@ form textarea {
     /* Bordes redondeados */
 }
 
+#warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+#warning p {
+    display: none;
+}
 
 ul {
     list-style-type: none;
