@@ -6,10 +6,10 @@ function checkform() {
     const aviso = document.getElementById("warning");
     if (password.value == password2.value && password.value !== '') {
         btnregister.disabled = false
-        aviso.style.display = "none";
+        aviso.firstChild.style.display = "none";
     } else {
         btnregister.disabled = true
-        aviso.style.display = "block";
+        aviso.firstChild.style.display = "flex";
     }
     
 }
