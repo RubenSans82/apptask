@@ -38,7 +38,7 @@ session_start();
             <ul>
                 </div>
                 <div class="navButton">
-                    <li><a href="index.php">Volver</a></li>
+                    <li><a href="main.php">Volver</a></li>
                 </div>
             </ul>
         </nav>

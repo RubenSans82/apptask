@@ -1,6 +1,5 @@
 <?php
-
-session_start();
+include'partials/header.php';
 if(!(isset($_GET['id']) && isset($_SESSION['user_id']))){
     header('Location: main.php');
 }
@@ -15,12 +14,11 @@ if(!$result = $query->fetch()){
     header('Location: main.php');
 }
 
-include'partials/header.php';
 ?>
 
 <main>
     <section>
-        <h2>Editar tarea</h2>
+        <h2 class="formTitle" >Editar tarea</h2>
         <form action="storeedit.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
             <label for="title">Título</label>

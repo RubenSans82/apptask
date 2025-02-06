@@ -17,24 +17,26 @@ session_start();
 
 <body>
     <header>
+        <div class="topHeader"></div>
         <div class="header">
-            <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <a href="" class="logo"><img src="img/logo.png" alt="logo"></a>
             <div class="imgUser">
-                <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="in" delay="500" state="in-reveal"
-                    colors="primary:#109121,secondary:#d1fad7" style="width:80px;height:80px">
-                </lord-icon>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <?php
+            <?php
                 if (isset($_SESSION['username'])) {
                     $username = $_SESSION['username'];
                 } else {
                     $username = "Invitado";
                 }
                 ?>
-                <li><?php echo $username ?> </li>
+                <span id="usernameNav"><?php echo $username ?> </span>
+                <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="hover"
+                    colors="primary:#109121,secondary:#d1fad7" style="width:80px;height:80px">
+                </lord-icon>
+            </div>
+        </div>
+        <nav>
+            <ul>
+
                 <div class="navButton">
                     <li><a href="edituser.php">Perfil de usuario</a></li>
                 </div>
