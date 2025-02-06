@@ -38,7 +38,7 @@ header {
     margin-right: 15px;
 }
 
-.header a img{
+.header a img {
 
     margin-left: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -46,7 +46,7 @@ header {
 }
 
 header img {
-    width: 118;
+    width: 118px;
     height: 100%;
     box-sizing: border-box;
     border-right: 3px solid rgb(24, 104, 0);
@@ -62,6 +62,8 @@ header img {
     justify-content: space-between;
     align-items: center;
     margin-right: 25px;
+    font-size: xx-large;
+
 }
 
 
@@ -122,7 +124,9 @@ nav ul li a {
     margin-right: 5px;
     font-family: sans-serif;
     padding: 1px;
-    }
+}
+
+
 
 
 
@@ -197,7 +201,7 @@ table tr:nth-child(odd) {
 footer {
     background-color: rgb(24, 104, 0);
     background: linear-gradient(90deg, rgba(24, 104, 0, 1) 10%, rgb(11, 49, 0) 20%, rgba(24, 104, 0, 1) 30%, rgb(11, 49, 0) 40%, rgba(24, 104, 0, 1) 50%, rgb(11, 49, 0) 60%, rgba(24, 104, 0, 1) 70%, rgb(11, 49, 0) 80%, rgba(24, 104, 0, 1) 90%, rgb(11, 49, 0) 100%);
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -223,6 +227,7 @@ footer p {
     /* Para que las chispas no interfieran con el mouse */
     width: 100%;
     height: 100%;
+    z-index: 3;
 }
 
 .spark {
@@ -263,28 +268,40 @@ form {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(24, 104, 0);
-    border: 1px solid rgb(4, 19, 0);
+    background-color: rgb(4, 19, 0);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
+    position: relative;
 }
 
+
 form label {
+
     margin-bottom: 5px;
     font-family: sans-serif;
     font-size: 14px;
+    
 }
 
+
+
 form input {
-    margin-bottom: 15px;
+    width: 300px;
+    height: 40px;
     padding: 10px;
-    border: 1px solid rgb(24, 104, 0);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 14px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none;
+    margin-bottom: 15px;
 }
+
 
 form button {
     padding: 10px;
@@ -293,16 +310,58 @@ form button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 120px;
+    width: 150px;
+    height: 40px;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     font-family: sans-serif;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
-form button:hover {
-    background-color: rgb(15, 65, 0);
+.animatedBtn {
+    transition: .4s ease-in-out all;
 }
+
+.animatedBtn .icono {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    background: transparent;
+    transition: .4s ease-in-out all;
+    fill: rgb(11, 49, 0);
+    opacity: 0;
+}
+
+.animatedBtn svg {
+    color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+}
+
+.animatedBtn span {
+    transition: .4s ease-in-out all;
+    position: relative;
+    left: -2.5%;
+}
+
+.animatedBtn:hover {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.animatedBtn:hover .icono {
+    left: 75%;
+    fill: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.animatedBtn:hover span {
+    left: -20%;
+}
+
 
 form select {
     margin-bottom: 15px;

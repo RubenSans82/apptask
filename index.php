@@ -17,6 +17,14 @@
         <div class="header">
             <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
             <div class="imgUser">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                } else {
+                    $username = "Invitado";
+                }
+                ?>
+                <span id="usernameNav"><?php echo $username ?> </span>
                 <lord-icon src="https://cdn.lordicon.com/iiudwewg.json" trigger="in" delay="500" state="in-reveal"
                     colors="primary:#109121,secondary:#d1fad7" style="width:80px;height:80px">
                 </lord-icon>
