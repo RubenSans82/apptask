@@ -15,8 +15,8 @@
     <header>
         <div class="topHeader"></div>
         <div class="header">
-            <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
-            <div class="imgUser">
+        <img class="logo" src="img/logo.png" alt="logo">
+        <div class="imgUser">
                 <?php
                 if (isset($_SESSION['username'])) {
                     $username = $_SESSION['username'];
