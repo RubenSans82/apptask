@@ -38,7 +38,7 @@ header {
     margin-right: 15px;
 }
 
-.header a img {
+.header img {
 
     margin-left: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -46,7 +46,7 @@ header {
 }
 
 header img {
-    width: 118px;
+    width: auto;
     height: 100%;
     box-sizing: border-box;
     border-right: 3px solid rgb(24, 104, 0);
@@ -153,17 +153,21 @@ main {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    width: fit-content;
     font-family: sans-serif;
     font-size: 90%;
     padding: 5px;
-    margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 #createButton a {
     text-decoration: none;
     color: white;
+
 }
 
 table {
@@ -174,7 +178,7 @@ table {
     font-size: 14px;
     text-align: left;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
+    border: 2px solid rgb(11, 49, 0);
 }
 
 table th,
@@ -255,11 +259,13 @@ footer p {
 .formTitle {
     text-align: center;
     margin-top: 20px;
-    color: rgb(24, 104, 0);
+    color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     font-weight: bold;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    background: rgb(24, 104, 0);
+
 }
 
 form {
@@ -269,9 +275,9 @@ form {
     margin: 0 auto;
     padding: 20px;
     background-color: rgb(4, 19, 0);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(24, 104, 0);
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5 5 15px rgba(0, 0, 0, 0.1);
     color: white;
     position: relative;
 }
@@ -282,7 +288,7 @@ form label {
     margin-bottom: 5px;
     font-family: sans-serif;
     font-size: 14px;
-    
+
 }
 
 
@@ -321,6 +327,7 @@ form button {
 }
 
 .animatedBtn {
+    border: 2px solid rgb(11, 49, 0);
     transition: .4s ease-in-out all;
 }
 
@@ -349,7 +356,7 @@ form button {
 }
 
 .animatedBtn:hover {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(24, 104, 0);
 }
 
 .animatedBtn:hover .icono {
@@ -406,4 +413,95 @@ form textarea {
     /* Color de fondo de la pista */
     border-radius: 10px;
     /* Bordes redondeados */
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.btnTable {
+    padding: 5px;
+}
+
+a:hover {
+    background-color: #008304;
+}
+
+.btnTable:hover {
+    background-color: transparent;
+}
+
+
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    color: white;
+    text-align: center;
+}
+
+
+.hero {
+    background-color: rgb(11, 49, 0, 0.6);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 6px solid rgb(11, 49, 0);
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background-color: rgb(11, 49, 0);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 0;
+}
+
+
+
+.features .feature {
+    background-color: rgb(11, 49, 0, 0.6);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 4px solid rgb(11, 49, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }

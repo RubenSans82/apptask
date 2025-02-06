@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'partials/header_user.php';
 include 'conection.php';
 ?>
 <main>

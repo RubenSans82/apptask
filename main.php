@@ -12,11 +12,11 @@ if (!isset($_SESSION['user_id'])) {
     <table>
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Fecha de creación</th>
-                <th>Estado</th>
-                <th>Acciones</th>
+                <th style="width: 50px;">Nombre</th>
+                <th style="width: 500px;">Descripción</th>
+                <th style="width: 50px;">Fecha de creación</th>
+                <th style="width: 50px;">Estado</th>
+                <th style="width: 0px;">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,8 +33,19 @@ if (!isset($_SESSION['user_id'])) {
                     <td><?php echo $task['creation_date']; ?></td>
                     <td><?php echo ucfirst($task['status']); ?></td>
                     <td>
-                        <a href='edit.php?id=<?php echo $task["tasks_id"]; ?>'>Editar</a>
-                        <a href='delete.php?id=<?php echo $task["tasks_id"]; ?>'>Eliminar</a>
+                        <a href='edit.php?id=<?php echo $task["tasks_id"]; ?>' class="btnTable"><lord-icon
+    src="https://cdn.lordicon.com/vysppwvq.json"
+    trigger="hover"
+    colors="primary:#30e849,secondary:#0a5c15"
+    style="width:25px;height:25px">
+</lord-icon></a>
+                        <a href='delete.php?id=<?php echo $task["tasks_id"]; ?>' class="btnTable"><lord-icon
+    src="https://cdn.lordicon.com/crxdwbpm.json"
+    trigger="hover"
+    delay="2000"
+    colors="primary:#30e849,secondary:#0a5c15"
+    style="width:25px;height:25px">
+</lord-icon></a>
                     </td>
                 </tr>
                 <?php

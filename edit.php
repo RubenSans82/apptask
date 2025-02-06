@@ -1,5 +1,5 @@
 <?php
-include'partials/header.php';
+include'partials/header_user.php';
 if(!(isset($_GET['id']) && isset($_SESSION['user_id']))){
     header('Location: main.php');
 }
@@ -31,8 +31,16 @@ if(!$result = $query->fetch()){
                 <option value="en proceso" <?php if($result['status_id' == 1]){echo "selected";}; ?>>En proceso</option>
                 <option value="terminada" <?php if($result['status_id' == 2]){echo "selected";}; ?>>Terminada</option>
             </select>
-            <button type="submit">Editar</button>
-        </form>
+            <button style="width: 110px;" class="animatedBtn" type="submit">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg>
+            </div>
+            <span>Editar</span>
+        </button>        </form>
     </section>
 </main>
 <?php
