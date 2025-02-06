@@ -21,7 +21,7 @@ include("partials/header_reg.php");
         <div> <label for="password2">Repetir contraseña</label>
             <input type="password" name="password2" id="password2" required>
         </div>
-        <div id="aviso">
+        <div id="warning">
             <p>Las contraseñas no coinciden</p>
         </div>
         <button class="animatedBtn" id="register" type="submit">
