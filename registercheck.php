@@ -13,6 +13,7 @@ if(isset($_POST["user"])){
     $query->bindParam(":password", $password);
     $query->execute();
     header("Location: login.php");
+    exit();
 }
 header("Location: register.php");
 ?>

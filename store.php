@@ -5,7 +5,7 @@ if (isset($_POST['title'])) {
     session_start();
     $title = $_POST['title'];
     $description = $_POST['description'];
-    switch($_POST['status']){
+    switch ($_POST['status']) {
         case 'pendiente':
             $status = 0;
             break;
