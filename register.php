@@ -21,7 +21,10 @@ include("partials/header_reg.php");
         <div> <label for="password2">Repetir contraseña</label>
             <input type="password" name="password2" id="password2" required>
         </div>
-        <button class="animatedBtn" type="submit">
+        <div id="warning">
+            <p>Las contraseñas no coinciden</p>
+        </div>
+        <button class="animatedBtn" id="register" type="submit">
             <div class="icono">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-arrow-right-short"
                     viewBox="0 0 16 16">
@@ -33,6 +36,7 @@ include("partials/header_reg.php");
         </button>
     </form>
 </main>
+<script src="js/register.js" ></script>
 <?php
 include("partials/footer.php");
 ?>
