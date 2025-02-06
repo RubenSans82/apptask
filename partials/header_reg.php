@@ -19,9 +19,9 @@ session_start();
     <header>
         <div class="topHeader"></div>
         <div class="header">
-            <a href="" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <img class="logo" src="img/logo.png" alt="logo">
             <div class="imgUser">
-            <?php
+                <?php
                 if (isset($_SESSION['username'])) {
                     $username = $_SESSION['username'];
                 } else {
