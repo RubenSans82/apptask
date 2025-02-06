@@ -32,3 +32,6 @@ if (isset($_SESSION['user_id'])) {
         </button>
     </form>
 </main>
+<?php
+include("partials/footer.php");
+?>

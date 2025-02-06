@@ -75,3 +75,8 @@ DEFAULT CHARACTER SET = utf8mb4;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+INSERT INTO `apptask`.`status` (`status_id`, `status`) VALUES ('0', 'Pendiente');
+INSERT INTO `apptask`.`status` (`status_id`, `status`) VALUES ('1', 'En Proceso');
+INSERT INTO `apptask`.`status` (`status_id`, `status`) VALUES ('2', 'Terminado');
